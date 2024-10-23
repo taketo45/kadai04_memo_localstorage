@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>myMemoPad</title>
+<link rel="stylesheet" href="css/sample.css">
+</head>
+<body>
+  <header>
+    <h1>メモ帳アプリ</h1>
+  </header>
+  <main>
+    <input type="hidden" id="key" >
+    <input type="text" id="title">
+    <textarea id="memo"></textarea>
+    <ul>
+      <li id="new">新しいメモ[Cmd]</li>
+      <!-- <li id="save">Save</li> -->
+      <li id="clear">全てのメモを消す</li>
+    </ul>
+  </main>
+  <table id="list">
+    <!-- ここに追加データが挿入される -->
+  </table>
+<footer>
+  <h1>機能紹介</h1>
+  <div>・各レコードごとの削除</div>
+  <div>・キーダウンによる自動保存</div>
+  <div>・自動保存時タイトル欄を更新しても1レコードに保存し続ける</div>
+  <div>  (→ タイムスタンプをKeyにして</div>
+  <div>Valueに配列を入れて1レコードで複数情報を管理)</div>
+  <div>・新しいメモボタン</div>
+  <div>・メモリ一覧の時間順ソート</div>
+  <div>・（内側の話）機能をクラス分割して管理</div>
+</footer>
+
+<script src="js/jquery-3.7.1.js"></script>
+<script src="js/constants.js"></script>
+<script src="js/testClass.js"></script>
+<script src="js/LocalStorageManager.js"></script>
+<script src="js/RitchMemoHandle.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
