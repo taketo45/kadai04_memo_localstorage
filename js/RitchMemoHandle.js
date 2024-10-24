@@ -132,5 +132,17 @@ class MemoHandler {
     }
   }
 
+  enterFocusContol(el){
+    $(el).keypress(function(e) {
+      let c = e.which ? e.which : e.keyCode;
+      if (c == 13) { 
+        let index = $(el).index(this);
+        let criteria = e.shiftKey ? ":lt(" + index + "):last" : ":gt(" + index + "):first";
+        $(el + criteria).focus();
+        e.preventDefault();
+      }
+    });
+  }
+
 }
 
