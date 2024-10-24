@@ -33,3 +33,18 @@ mh.documentDisplay();
 //6. キーダウンイベントで自動保存
 mh.keyDownControl(EL.$title);
 mh.keyDownControl(EL.$memo);
+
+//7.Enterキーでフォーカス移動、Shift+Enterキーでフォーカス戻る
+enterFocusContol(EL.elements);
+
+function enterFocusContol(el){
+  $(el).keypress(function(e) {
+    let c = e.which ? e.which : e.keyCode;
+    if (c == 13) { 
+      let index = $(el).index(this);
+      let criteria = e.shiftKey ? ":lt(" + index + "):last" : ":gt(" + index + "):first";
+      $(el + criteria).focus();
+      e.preventDefault();
+    }
+  });
+}

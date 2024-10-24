@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>myMemoPad</title>
+<link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/sample.css">
 </head>
 <body>
@@ -11,18 +12,20 @@
   </header>
   <main>
     <input type="hidden" id="key" >
-    <input type="text" id="title">
-    <textarea id="memo"></textarea>
+    <input type="text" id="title" class="moveto" index="1">
+    <textarea id="memo"  class="moveto" index="2"></textarea>
     <ul>
-      <li id="new">新しいメモ[Cmd]</li>
+      <li id="new" class="btn" index="3">新しいメモ[Cmd]</li>
       <!-- <li id="save">Save</li> -->
-      <li id="clear">全てのメモを消す</li>
+      <li id="clear" class="btn">全てのメモを消す</li>
     </ul>
   </main>
   <table id="list">
     <!-- ここに追加データが挿入される -->
   </table>
 <footer>
+  <p></p>
+  <p></p>
   <h1>機能紹介</h1>
   <div>・各レコードごとの削除</div>
   <div>・キーダウンによる自動保存</div>
@@ -32,6 +35,8 @@
   <div>・新しいメモボタン</div>
   <div>・メモリ一覧の時間順ソート</div>
   <div>・（内側の話）機能をクラス分割して管理</div>
+  <div>・デバッグモードを指定するとコンソールログにログを履きまくる</div>
+  <div>・Enterキーでカーソルのフォーカスを進め、Shift+Enterキーでカーソルのフォーカスを戻す</div>
 </footer>
 
 <script src="js/jquery-3.7.1.js"></script>
@@ -40,5 +45,8 @@
 <script src="js/LocalStorageManager.js"></script>
 <script src="js/RitchMemoHandle.js"></script>
 <script src="js/main.js"></script>
+<script>
+
+</script>
 </body>
 </html>

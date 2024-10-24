@@ -8,6 +8,7 @@ const EL = {
   $key: $("#key"),
   $title: $("#title"),
   $memo: $("#memo"),
+  elements: ".moveto"
 }
 
 const KEYS = {
